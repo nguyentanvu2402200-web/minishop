@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Shop - Mua sắm dễ dàng</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__inner">
+            <h1 class="header__title">MINI SHOP</h1>
+            <div id="cartButton" class="header__cart" title="Xem giỏ hàng">
+                <span class="cart-icon">🛒</span>
+                <span id="cartBadge" class="cart-badge">0</span>
+            </div>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <ul class="navbar__list">
+            <li class="navbar__item"><a href="#" class="navbar__link active">Trang chủ</a></li>
+            <li class="navbar__item"><a href="#productsSection" class="navbar__link">Sản phẩm</a></li>
+            <li class="navbar__item"><a href="#aboutSection" class="navbar__link">Thông tin</a></li>
+            <li class="navbar__item"><a href="#contactSection" class="navbar__link">Liên hệ</a></li>
+        </ul>
+    </nav>
+
+    <main class="container">
+        
+        <section class="hero-section">
+            <div class="hero-card">
+                <h2 class="hero-card__title">Chào mừng đến Mini Shop</h2>
+                <p class="hero-card__subtitle">Mua sắm dễ dàng - Giá tốt mỗi ngày</p>
+                <div class="hero-card__actions">
+                    <a href="#productsSection" class="btn btn--primary">Xem sản phẩm</a>
+                    <button id="btnCheckout" class="btn btn--success">Thanh toán</button>
+                    <button id="btnFavorite" class="btn btn--pink">Yêu thích</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="productsSection" class="products-section">
+            <h2 class="section-title">Sản phẩm nổi bật</h2>
+
+            <div class="toolbar">
+                <div class="search-box">
+                    <input type="text" id="searchInput" class="search-input" placeholder="Tìm kiếm sản phẩm...">
+                </div>
+                <div class="filter-group">
+                    <button class="filter-btn active" data-category="all">Tất cả</button>
+                    <button class="filter-btn" data-category="Áo">Áo</button>
+                    <button class="filter-btn" data-category="Chân váy">Chân váy</button>
+                    <button class="filter-btn" data-category="Quần">Quần</button>
+                    <button class="filter-btn" data-category="Váy">Váy</button>
+                </div>
+            </div>
+
+            <div id="productGrid" class="product-grid">
+                
+                <article class="product-card" data-id="1" data-category="Áo" data-name="Áo" data-price="324000" data-img="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80">
+                    <div class="product-card__image-wrap">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" 
+                             alt="Sản phẩm Áo thời trang" 
+                             class="product-card__image" 
+                             loading="lazy">
+                        <button class="btn-quickview" data-id="1">Xem nhanh</button>
+                    </div>
+                    <div class="product-card__body">
+                        <h3 class="product-card__name">Áo</h3>
+                        <p class="product-card__price">324.000đ</p>
+                        <button class="btn btn--buy">Mua ngay</button>
+                    </div>
+                </article>
+
+                <article class="product-card" data-id="2" data-category="Chân váy" data-name="Chân váy" data-price="524000" data-img="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=600&q=80">
+                    <div class="product-card__image-wrap">
+                        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=600&q=80" 
+                             alt="Sản phẩm Chân váy thời trang" 
+                             class="product-card__image" 
+                             loading="lazy">
+                        <button class="btn-quickview" data-id="2">Xem nhanh</button>
+                    </div>
+                    <div class="product-card__body">
+                        <h3 class="product-card__name">Chân váy</h3>
+                        <p class="product-card__price">524.000đ</p>
+                        <button class="btn btn--buy">Mua ngay</button>
+                    </div>
+                </article>
+
+                <article class="product-card" data-id="3" data-category="Quần" data-name="Quần" data-price="124000" data-img="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=600&q=80">
+                    <div class="product-card__image-wrap">
+                        <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=600&q=80" 
+                             alt="Sản phẩm Quần thời trang" 
+                             class="product-card__image" 
+                             loading="lazy">
+                        <button class="btn-quickview" data-id="3">Xem nhanh</button>
+                    </div>
+                    <div class="product-card__body">
+                        <h3 class="product-card__name">Quần</h3>
+                        <p class="product-card__price">124.000đ</p>
+                        <button class="btn btn--buy">Mua ngay</button>
+                    </div>
+                </article>
+
+                <article class="product-card" data-id="4" data-category="Váy" data-name="Váy" data-price="524000" data-img="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=600&q=80">
+                    <div class="product-card__image-wrap">
+                        <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=600&q=80" 
+                             alt="Sản phẩm Váy thời trang" 
+                             class="product-card__image" 
+                             loading="lazy">
+                        <button class="btn-quickview" data-id="4">Xem nhanh</button>
+                    </div>
+                    <div class="product-card__body">
+                        <h3 class="product-card__name">Váy</h3>
+                        <p class="product-card__price">524.000đ</p>
+                        <button class="btn btn--buy">Mua ngay</button>
+                    </div>
+                </article>
+
+            </div>
+            <div id="noProductFound" class="no-product">Không tìm thấy sản phẩm phù hợp.</div>
+        </section>
+
+        <section id="aboutSection" class="info-section">
+            <h2 class="section-title">Về Mini Shop</h2>
+            <div class="info-card">
+                <p>Mini Shop là thương hiệu thời trang trẻ trung, năng động, luôn cung cấp những bộ trang phục cập nhật xu hướng mới nhất với mức giá hợp lý và dịch vụ tận tâm.</p>
+            </div>
+        </section>
+
+        <section id="contactSection" class="contact-section">
+            <h2 class="section-title">Liên hệ</h2>
+            <div class="info-card">
+                <p>📍 Địa chỉ: 123 Đường Thời Trang, TP. Hồ Chí Minh</p>
+                <p>📞 Hotline: 0900 123 456</p>
+                <p>✉️ Email: contact@minishop.vn</p>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="cartModal" class="modal">
+        <div class="modal__overlay" id="modalOverlay"></div>
+        <div class="modal__content">
+            <div class="modal__header">
+                <h3 class="modal__title">Giỏ hàng của bạn</h3>
+                <button id="btnCloseModal" class="modal__close">&times;</button>
+            </div>
+            <div class="modal__body">
+                <div id="cartEmptyMessage" class="cart-empty">Giỏ hàng của bạn đang trống!</div>
+                <div id="cartItemList" class="cart-items"></div>
+            </div>
+            <div class="modal__footer">
+                <div class="cart-total">
+                    <span>Tổng tiền:</span>
+                    <strong id="cartTotalPrice" class="cart-total__price">0đ</strong>
+                </div>
+                <div class="modal__actions">
+                    <button id="btnClearCart" class="btn btn--secondary-outline">Xóa giỏ</button>
+                    <button id="btnOrderSubmit" class="btn btn--success">Đặt hàng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="quickViewModal" class="modal">
+        <div class="modal__overlay" id="quickViewOverlay"></div>
+        <div class="modal__content modal__content--lg">
+            <div class="modal__header">
+                <h3 id="qvTitle" class="modal__title">Chi tiết sản phẩm</h3>
+                <button id="btnCloseQuickView" class="modal__close">&times;</button>
+            </div>
+            <div class="modal__body qv-body">
+                <div class="qv-image-wrap">
+                    <img id="qvImage" src="" alt="" class="qv-image">
+                </div>
+                <div class="qv-details">
+                    <h4 id="qvName" class="qv-name"></h4>
+                    <p id="qvPrice" class="qv-price"></p>
+                    <p class="qv-desc">Chất liệu cao cấp, thoáng mát, thiết kế phom dáng hiện đại phù hợp cho đi làm, đi chơi hay dự tiệc.</p>
+                    <div class="qv-size">
+                        <label>Chọn kích cỡ:</label>
+                        <div class="size-options">
+                            <button class="size-btn active">S</button>
+                            <button class="size-btn">M</button>
+                            <button class="size-btn">L</button>
+                        </div>
+                    </div>
+                    <button id="qvAddToCart" class="btn btn--primary qv-btn-add">Thêm vào giỏ hàng</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p class="footer__text">&copy; 2024 Mini Shop - Hãy theo dõi chúng tôi để có thêm thông tin mới</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
